@@ -64,3 +64,9 @@ The function then handles the different `whence` cases:
 For all cases, the function writes the new offset value to the provided memory location (`newoffset`) using the WebAssembly memory view.
 
 Finally, the function returns `Errno::Success` to indicate a successful operation.
+
+| Whence   | Value | Description |
+| :-       |  :-:  | :- |
+| SEEK_SET |   0   | Sets the offset to an absolute value |
+| SEEK_CUR |   1   | Adjusts the offset relative to the current position |
+| SEEK_END |   2   | Adjusts the offset relative to the end of the file |

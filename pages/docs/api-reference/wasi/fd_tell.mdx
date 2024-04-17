@@ -13,6 +13,7 @@ The `fd_tell()` function retrieves the current offset of the specified file desc
   ;;; Return the current offset of a file descriptor.
   (@interface func (export "fd_tell")
     (param $fd $fd)
+    (param $offset (@witx pointer (@witx pointer $size)))
     ;;; The current offset of the file descriptor, relative to the start of the file.
     (result $error (expected $filesize (error $errno)))
   )
